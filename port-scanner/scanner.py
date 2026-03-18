@@ -8,9 +8,12 @@ parser.add_argument("-t", "--target", required=True, help="IP ou host alvo")
 parser.add_argument("-p", "--ports", required=True, help="Range de portas (ex: 1-100)")
 parser.add_argument("-o", "--output", help="Arquivo para salvar resultado")
 args = parser.parse_args()
-
 target = socket.gethostbyname(args.target)
-start_port, end_port = map(int, args.ports.split("-"))
+
+if "-" in args.ports:
+    start_port, end_port = map(int, args.ports.split("-"))
+else:
+    start_port = end_port = int(args.ports)
 
 open_ports = []
 lock = threading.Lock()
