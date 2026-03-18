@@ -36,6 +36,11 @@ python scanner.py -t scanme.nmap.org -p 20-100 -o resultado.txt
 
 ---
 
+## Resultado
+![result](assets/results.png)
+
+---
+
 ## ⚠️ Aviso
 
 Uso educacional. Não utilize sem autorização.
