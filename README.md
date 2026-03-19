@@ -1,30 +1,37 @@
 # 🔎 Port Scanner
 
-Ferramenta simples em Python para varredura de portas TCP em um host.
+Ferramenta leve em Python para varredura de portas TCP, com suporte a multithreading e banner grabbing para identificação de serviços.
 
 ---
 
 ## 🚀 Funcionalidades
 
-* Scan de portas TCP
-* Suporte a IP e domínio
+* Varredura de portas TCP
 * Multithreading (execução rápida)
-* Identificação de serviços
-* Exportação de resultados
+* Suporte a IP e domínio
+* Identificação básica de serviços
+* Banner grabbing (detecção de versão/tecnologia)
+* Exportação de resultados para arquivo
 
 ---
 
 ## 💻 Uso
 
 ```bash
-python scanner.py -t <alvo> -p <intervalo> -o <arquivo>
+python scanner.py -t <alvo> -p <portas> -o <arquivo>
 ```
 
 ### Exemplo
 
 ```bash
-python scanner.py -t scanme.nmap.org -p 20-100 -o resultado.txt
+python scanner.py -t scanme.nmap.org -p 20-80 -o resultado.txt
 ```
+
+---
+
+## 📊 Resultado
+
+![result](assets/results.png)
 
 ---
 
@@ -36,11 +43,7 @@ python scanner.py -t scanme.nmap.org -p 20-100 -o resultado.txt
 
 ---
 
-## Resultado
-![result](assets/results.png)
-
----
-
 ## ⚠️ Aviso
 
-Uso educacional. Não utilize sem autorização.
+Este projeto foi desenvolvido para fins educacionais.
+Não utilize em sistemas sem autorização.
